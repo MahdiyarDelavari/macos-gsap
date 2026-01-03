@@ -3,8 +3,10 @@ import React from "react";
 import { navIcons, navLinks } from "@constants";
 import dayjs from "dayjs";
 import { useEffect, useState } from "react";
+import useWindowStore from "@store/window";
 
 const Navbar = () => {
+    const { openWindow } = useWindowStore();
 
 	const [currentTime, setCurrentTime] = useState(dayjs());
 	useEffect(() => {
@@ -22,7 +24,7 @@ const Navbar = () => {
 
                 <ul>
                     {navLinks.map((item) => (
-                        <li key={item.id} className="cursor-pointer">
+                        <li key={item.id} className="cursor-pointer" onClick={()=> openWindow(item.type)}>
                             <p>{item.name}</p>
                         </li>
                     ))}

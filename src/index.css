@@ -88,7 +88,7 @@ body {
 		}
 
 		.dock-icon {
-			@apply size-14 3xl:size-20 cursor-pointer;
+			@apply size-12 3xl:size-20 cursor-pointer;
 
 			img {
 				@apply object-cover object-center;
@@ -162,7 +162,7 @@ body {
 		@apply w-4xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
 		.search {
-			@apply flex items-center bg-white rounded-full px-3 py-1 shadow border border-gray-300 w-full max-w-lg gap-3 ;
+			@apply flex items-center bg-white rounded-full px-3 py-1 shadow border border-gray-300 w-full max-w-lg gap-3;
 
 			input {
 				@apply flex-1 outline-none bg-transparent text-gray-700 placeholder-gray-400;
@@ -201,5 +201,7 @@ body {
 			}
 		}
 	}
-
+	#resume {
+		@apply w-fit h-fit absolute top-16 left-7/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+	}
 }
