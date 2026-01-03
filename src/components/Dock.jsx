@@ -1,0 +1,87 @@
+import { dockApps } from "@constants";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import React from "react";
+import {Tooltip} from 'react-tooltip';   
+
+const Dock = () => {
+    const dockRef = React.useRef(null);
+    
+    useGSAP(() => {
+        const dock = dockRef.current;
+        if (!dock) return;
+
+        const icons = dock.querySelectorAll(".dock-icon");
+
+        const animateIcons = (mouseX) => {
+
+            const { left } = dock.getBoundingClientRect();
+            icons.forEach((icon) => {
+                const { left: iconLeft, width: iconWidth } = icon.getBoundingClientRect();
+                const center = iconLeft - left + iconWidth / 2;
+                const distance = Math.abs(mouseX - center);
+                const intensity = Math.exp(-(distance ** 2.6) / 20000);
+                
+                gsap.to(icon, {
+                    scale: 1 + intensity * 0.25,
+                    y: -intensity * 15,
+                    duration: 0.3,
+                    ease: "power1.out",
+
+                })
+            });
+        }
+        const handleMouseMove = (e) => {
+            const left = dock.getBoundingClientRect().left;
+            animateIcons(e.clientX - left);
+        }
+        const handleMouseLeave = () => {
+            icons.forEach((icon) => {
+                gsap.to(icon, {
+                    scale: 1,
+                    y: 0,
+                    duration: 0.3,
+                    ease: "power1.out",
+                });
+            });
+        }
+        dock.addEventListener("mousemove", handleMouseMove);
+        dock.addEventListener("mouseleave", handleMouseLeave);
+
+        return () => {
+            dock.removeEventListener("mousemove", handleMouseMove);
+            dock.removeEventListener("mouseleave", handleMouseLeave);
+        }
+    },[]);
+
+	const toggleApp = (appId) => {
+		// Logic to open or focus the application window
+		console.log(`Toggling app: ${appId}`);
+	};
+
+	return (
+		<section id="dock">
+			<div ref={dockRef} className="dock-container">
+				{dockApps.map((app) => (
+					<div key={app.id} className="relative flex justify-center">
+						<button
+							type="button"
+							className="dock-icon"
+							aria-label={app.name}
+							data-tooltip-id="dock-tooltip"
+							data-tooltip-content={app.name}
+							data-tooltip-delay-show={150}
+							disabled={!app.canOpen}
+							onClick={() => toggleApp(app.id)}
+						>
+							<img src={`/images/${app.icon}`} alt={app.name} loading="lazy" className={app.canOpen ? "" : "opacity-60"} />
+						</button>
+					</div>
+                ))}
+                <Tooltip id="dock-tooltip" place="top" effect="solid" className="tooltip"/>
+			</div>
+		</section>
+	);
+};
+
+export default Dock;
