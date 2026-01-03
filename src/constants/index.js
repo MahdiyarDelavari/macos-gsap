@@ -1,61 +1,80 @@
 export const navLinks = [
-    { id: 1, name: "Projects",type:"finder" },
-	{ id: 2, name: "Contact",type:"contact" },
-	{ id: 3, name: "Resume",type:"resume" },
+	{ id: 1, name: "Projects", type: "finder" },
+	{ id: 2, name: "Contact", type: "contact" },
+	{ id: 3, name: "Resume", type: "resume" },
 ];
 export const navIcons = [
-    { id: 1, img: "/icons/wifi.svg", alt: "wifi" },
-    { id: 2, img: "/icons/search.svg", alt: "search" },
-    { id: 3, img: "/icons/user.svg", alt: "user" },
-    { id: 4, img: "/icons/mode.svg", alt: "mode" },
-]
+	{ id: 1, img: "/icons/wifi.svg", alt: "wifi" },
+	{ id: 2, img: "/icons/search.svg", alt: "search" },
+	{ id: 3, img: "/icons/user.svg", alt: "user" },
+	{ id: 4, img: "/icons/mode.svg", alt: "mode" },
+];
 export const dockApps = [
-    {
-        id: "finder",
-        name: "Portfolio",
-        icon: "finder.png",
-        canOpen: true,
-    },
-    {
-        id: "safari",
-        name: "Articles",
-        icon: "safari.png",
-        canOpen: true,
-    },
-    {
-        id: "photos",
-        name: "Gallery",
-        icon: "photos.png",
-        canOpen: true,
-    },
-    {
-        id: "contact",
-        name: "Contact",
-        icon: "contact.png",
-        canOpen: true,
-    },
-    {
-        id: "terminal",
-        name: "Skills",
-        icon: "terminal.png",
-        canOpen: true,
-    },
-    {
-        id: "trash",
-        name: "Archive",
-        icon: "trash.png",
-        canOpen: false,
-    },
+	{
+		id: "finder",
+		name: "Portfolio",
+		icon: "finder.png",
+		canOpen: true,
+	},
+	{
+		id: "safari",
+		name: "Articles",
+		icon: "safari.png",
+		canOpen: true,
+	},
+	{
+		id: "photos",
+		name: "Gallery",
+		icon: "photos.png",
+		canOpen: true,
+	},
+	{
+		id: "contact",
+		name: "Contact",
+		icon: "contact.png",
+		canOpen: true,
+	},
+	{
+		id: "terminal",
+		name: "Skills",
+		icon: "terminal.png",
+		canOpen: true,
+	},
+	{
+		id: "trash",
+		name: "Archive",
+		icon: "trash.png",
+		canOpen: false,
+	},
 ];
 
 export const INITIAL_Z_INDEX = 1000;
 export const WINDOW_CONFIG = {
-    finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+	finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+	contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+	resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+	safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+	photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+	terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+	txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+	imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
+
+export const techStack = [
+	{
+		category: "Frontend",
+		items: ["HTML", "CSS", "JavaScript", "React.js", "Next.js", "TypeScript"],
+	},
+	{
+		category: "Styling",
+		items: ["Tailwind CSS", "Bootstrap", "CSS"],
+	},
+	{
+		category: "Dev Tools",
+		items: ["Git", "GitHub", "VS Code", "Webpack", "Vite"],
+    },
+    {
+        category: "Animation",
+        items: ["GSAP", "Framer Motion","Swiper.js"],
+    }
+];
