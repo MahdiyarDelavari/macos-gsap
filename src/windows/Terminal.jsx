@@ -38,7 +38,7 @@ const Terminal = () => {
 				</ul>
 				<div className="footnote">
 					<p>
-						<Check className="check" size={20} /> 5 Of 5 Stacks Loaded
+						<Check className="check" size={20} /> {techStack.length} Of {techStack.length} Stacks Loaded
 						Successfully (100%)
 					</p>
 					<p className="text-black">
