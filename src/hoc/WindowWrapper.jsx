@@ -36,8 +36,17 @@ const WindowWrapper = (Component, WindowKey) => {
 			const el = ref.current;
 			if (!el) return;
 
+			const header = el.querySelector("#window-header");
+			if (!header) {
+				console.error(
+					`Header element with class 'header' not found in ${WindowKey}`
+				);
+				return;
+			}
+
 			const [instance] = Draggable.create(el, {
 				bounds: "main",
+				handle: header,
 				onPress() {
 					focusWindow(WindowKey);
 				},
