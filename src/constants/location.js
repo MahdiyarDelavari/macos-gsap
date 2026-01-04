@@ -98,7 +98,7 @@ const ABOUT_LOCATION = {
 			kind: "file",
 			fileType: "img",
 			position: "top-10 left-5",
-			imageUrl: "/images/tardis.png",
+			image: "/images/tardis.png",
 		},
 		{
 			id: 2,
@@ -107,7 +107,7 @@ const ABOUT_LOCATION = {
 			kind: "file",
 			fileType: "img",
 			position: "top-28 right-72",
-			imageUrl: "/images/tardis.png",
+			image: "/images/tardis.png",
 		},
 		{
 			id: 3,
@@ -116,7 +116,7 @@ const ABOUT_LOCATION = {
 			kind: "file",
 			fileType: "img",
 			position: "top-52 left-80",
-			imageUrl: "/images/tardis.png",
+			image: "/images/tardis.png",
 		},
 		{
 			id: 4,
@@ -124,9 +124,9 @@ const ABOUT_LOCATION = {
 			icon: "/images/txt.png",
 			kind: "file",
 			fileType: "txt",
-			position: "top-60 left-5",
+			position: "top-6 left-90",
 			subtitle: "Meet the Developer Behind the Code",
-			imageUrl: "/images/tardis.png",
+			image: "/images/tardis.png",
 			description: [
 				"Hey! I’m Mahdiyar 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
 				"I specialize in JavaScript, React, and Next.js and I love making things feel smooth, fast, and just a little bit delightful.",
@@ -168,7 +168,7 @@ const TRASH_LOCATION = {
 			kind: "file",
 			fileType: "img",
 			position: "top-10 left-10",
-			imageUrl: "/images/trash-1.png",
+			image: "/images/blog1.png",
 		},
 		{
 			id: 2,
@@ -177,7 +177,7 @@ const TRASH_LOCATION = {
 			kind: "file",
 			fileType: "img",
 			position: "top-40 left-80",
-			imageUrl: "/images/trash-2.png",
+			image: "/images/blog2.png",
 		},
 	],
 };

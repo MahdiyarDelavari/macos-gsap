@@ -1,33 +1,37 @@
-import Dock from '@components/Dock'
-import Navbar from '@components/Navbar'
-import Welcome from '@components/Welcome'
-import React from 'react'
+import Dock from "@components/Dock";
+import Navbar from "@components/Navbar";
+import Welcome from "@components/Welcome";
+import React from "react";
 
-import { Draggable } from 'gsap/Draggable'
-import gsap from 'gsap'
-import Terminal from '@windows/Terminal'
-import Safari from '@windows/Safari'
-import Resume from '@windows/Resume'
-import Finder from '@windows/Finder'
+import { Draggable } from "gsap/Draggable";
+import gsap from "gsap";
+import Terminal from "@windows/Terminal";
+import Safari from "@windows/Safari";
+import Resume from "@windows/Resume";
+import Finder from "@windows/Finder";
+import Text from "@windows/Text";
+import Image from "@windows/Image";
 
 gsap.registerPlugin(Draggable);
 
 const App = () => {
-  return (
-    <>
-      <Navbar />
+	return (
+		<>
+			<Navbar />
 
-    <main>
-      <Welcome />
-      <Dock />
-      
-        <Terminal />
-        <Safari />
-        <Resume />
-        <Finder />
-    </main>
-    </>
-  )
-}
+			<main>
+				<Welcome />
+				<Dock />
 
-export default App
+				<Terminal />
+				<Safari />
+				<Resume />
+				<Finder />
+				<Text />
+				<Image />
+			</main>
+		</>
+	);
+};
+
+export default App;

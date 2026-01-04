@@ -6,7 +6,7 @@ import { Search } from "lucide-react";
 import React from "react";
 
 const Finder = () => {
-  const { openWindow } = useWindowStore();
+	const { openWindow } = useWindowStore();
 	const [activeLocation, setActiveLocation] = React.useState(null);
 
 	const renderList = (name, items) => (
@@ -29,13 +29,15 @@ const Finder = () => {
 				))}
 			</ul>
 		</div>
-  );
-  
-  const openItem = (item) => {
-    if (item.fileType === "pdf") return openWindow("resume");
-    if (item.kind === "folder") return setActiveLocation(item);
-    if (item.fileType === "url") return window.open(item.href, "_blank");
-  }
+	);
+
+	const openItem = (item) => {
+		if (item.fileType === "pdf") return openWindow("resume");
+		if (item.kind === "folder") return setActiveLocation(item);
+		if (item.fileType === "url") return window.open(item.href, "_blank");
+
+		openWindow(`${item.fileType}${item.kind}`, item);
+	};
 
 	return (
 		<>
@@ -48,18 +50,20 @@ const Finder = () => {
 				<div className="sidebar">
 					{renderList("Favorites", Object.values(locations))}
 
-          {renderList("Work", locations.work.children)}
-          
-        </div>
-        <ul className="content">
-
-          {activeLocation?.children?.map((item) => (
-            <li key={item.id} className={item.position} onDoubleClick={() => openItem(item)}>
-              <img src={item.icon} alt={item.name} />
-              <p>{item.name}</p>
-            </li>
-          ))}
-        </ul>
+					{renderList("Work", locations.work.children)}
+				</div>
+				<ul className="content">
+					{activeLocation?.children?.map((item) => (
+						<li
+							key={item.id}
+							className={item.position}
+							onDoubleClick={() => openItem(item)}
+						>
+							<img src={item.icon} alt={item.name} />
+							<p>{item.name}</p>
+						</li>
+					))}
+				</ul>
 			</div>
 		</>
 	);
