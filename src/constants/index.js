@@ -121,6 +121,78 @@ export const blogPosts = [
 	},
 ];
 
+export const photosLinks = [
+	{
+		id: 1,
+		icon: "/icons/gicon1.svg",
+		title: "Library",
+	},
+	{
+		id: 2,
+		icon: "/icons/gicon2.svg",
+		title: "Memories",
+	},
+	{
+		id: 3,
+		icon: "/icons/file.svg",
+		title: "Places",
+	},
+	{
+		id: 4,
+		icon: "/icons/gicon4.svg",
+		title: "People",
+	},
+	{
+		id: 5,
+		icon: "/icons/gicon5.svg",
+		title: "Favorites",
+	},
+];
+
+export const gallery = [
+	{
+		id: 1,
+		category: "Library",
+		images: [
+			{ id: 1, img: "/images/tardis.png", name: "Photo 1" },
+			{ id: 2, img: "/images/tardis.png", name: "Photo 2" },
+			{ id: 3, img: "/images/tardis.png", name: "Photo 3" },
+			{ id: 4, img: "/images/tardis.png", name: "Photo 4" },
+		],
+	},
+	{
+		id: 2,
+		category: "Memories",
+		images: [
+			{ id: 5, img: "/images/tardis.png", name: "Memory 1" },
+			{ id: 6, img: "/images/tardis.png", name: "Memory 2" },
+		],
+	},
+	{
+		id: 3,
+		category: "Places",
+		images: [
+			{ id: 7, img: "/images/tardis.png", name: "Place 1" },
+			{ id: 8, img: "/images/tardis.png", name: "Place 2" },
+		],
+	},
+	{
+		id: 4,
+		category: "People",
+		images: [
+			{ id: 9, img: "/images/tardis.png", name: "Person 1" },
+		],
+	},
+	{
+		id: 5,
+		category: "Favorites",
+		images: [
+			{ id: 10, img: "/images/tardis.png", name: "Favorite 1" },
+			{ id: 11, img: "/images/tardis.png", name: "Favorite 2" },
+		],
+	},
+];
+
 export const socials = [
 	{
 		id: 1,

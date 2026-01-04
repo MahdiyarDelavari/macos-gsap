@@ -12,6 +12,8 @@ import Finder from "@windows/Finder";
 import Text from "@windows/Text";
 import Image from "@windows/Image";
 import Contact from "@windows/Contact";
+import Home from "@components/Home";
+import Photo from "@windows/Photo";
 
 gsap.registerPlugin(Draggable);
 
@@ -30,7 +32,9 @@ const App = () => {
 				<Finder />
 				<Text />
         <Image />
-        <Contact/>
+        <Contact />
+        <Home />
+        <Photo/>
 			</main>
 		</>
 	);
