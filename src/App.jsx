@@ -16,6 +16,7 @@ import Home from "@components/Home";
 import Photo from "@windows/Photo";
 import MusicPlayer from "@windows/MusicPlayer";
 import Chrome from "@windows/Chrome";
+import VSCode from "@windows/VSCode";
 
 gsap.registerPlugin(Draggable);
 
@@ -39,6 +40,7 @@ const App = () => {
 				<Photo />
 				<MusicPlayer />
 				<Chrome />
+				<VSCode />
 			</main>
 		</>
 	);

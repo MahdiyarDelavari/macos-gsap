@@ -16,12 +16,7 @@ export const dockApps = [
 		icon: "finder.png",
 		canOpen: true,
 	},
-	{
-		id: "chrome",
-		name: "Chrome",
-		icon: "chrome.png",
-		canOpen: true,
-	},
+	
 	{
 		id: "safari",
 		name: "Articles",
@@ -47,6 +42,19 @@ export const dockApps = [
 		canOpen: true,
 	},
 	{
+		id: "chrome",
+		name: "Chrome",
+		icon: "chrome.png",
+		canOpen: true,
+	},
+	
+	{
+		id: "vscode",
+		name: "VS Code",
+		icon: "vscode.png",
+		canOpen: true,
+	},
+	{
 		id: "musicplayer",
 		name: "Music Player",
 		icon: "music.png",
@@ -66,6 +74,7 @@ export const WINDOW_CONFIG = {
 	finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 	contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 	resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+	vscode: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 	chrome: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 	safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 	photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
