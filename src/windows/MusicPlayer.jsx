@@ -334,16 +334,17 @@ const MusicPlayer = () => {
 						<div className="h-14 flex gap-2 bg-white/70 backdrop-blur-2xl border border-gray-200 rounded-2xl shadow-md p-5 mt-4 mx-auto now-playing-bar">
 							{[
 								1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
-								19, 20, 21, 22, 23, 24
+								19, 20, 21, 22, 23, 24,
 							].map((bar) => (
 								<div
 									key={bar}
 									className={`indicator-line w-0.5 h-6
                                     ${isPlaying ? "active" : ""}
-                                    ${bar % 2 === 0
-										? "bg-gray-400"
-										: "bg-blue-300"
-									}
+                                    ${
+																			bar % 2 === 0
+																				? "bg-gray-400"
+																				: "bg-blue-300"
+																		}
 								`}
 									style={{ animationDelay: `${bar * 0.1}s` }}
 								/>

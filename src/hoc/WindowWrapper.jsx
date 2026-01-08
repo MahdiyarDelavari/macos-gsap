@@ -47,6 +47,7 @@ const WindowWrapper = (Component, WindowKey) => {
 			const [instance] = Draggable.create(el, {
 				bounds: "main",
 				handle: header,
+				ignore: "input, textarea, button, select, a, [data-no-drag='true']",
 				onPress() {
 					focusWindow(WindowKey);
 				},
