@@ -41,11 +41,18 @@ export const dockApps = [
 		canOpen: true,
 	},
 	{
+		id: "musicplayer",
+		name: "Music Player",
+		icon: "music.png",
+		canOpen: true,
+	},
+	{
 		id: "trash",
 		name: "Archive",
 		icon: "trash.png",
 		canOpen: false,
 	},
+	
 ];
 
 export const INITIAL_Z_INDEX = 1000;
@@ -58,6 +65,7 @@ export const WINDOW_CONFIG = {
 	terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 	txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 	imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+	musicplayer: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export const techStack = [
